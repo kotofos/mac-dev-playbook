@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  connection: local
 
   vars_files:
     - default.config.yml
@@ -11,6 +10,7 @@
         - ../config.yml
 
   roles:
+    - ssh_key
     - geerlingguy.homebrew
     - geerlingguy.dotfiles
     - name: geerlingguy.mas
