@@ -1,0 +1,18 @@
+---
+- name: Check is yadm repo exists
+  shell: yadm list
+  register: yadm_repo_result
+  failed_when: "yadm_repo_result.rc != 0 and 'Git repo does not exist' not in yadm_repo_result.stdout"
+  changed_when: False
+  become: no
+
+- name: Clone yadm repo
+  shell: yadm clone "{{ dotfiles_repo }}"
+  register: yadm_clone_result
+  when: "'Git repo does not exist' in yadm_repo_result.stdout"
+  become: no
+
+- name: Overwrite local dotfiles
+  shell: yadm reset --hard origin/master
+  when: "'conflict' in yadm_clone_result.stdout"
+  become: no
