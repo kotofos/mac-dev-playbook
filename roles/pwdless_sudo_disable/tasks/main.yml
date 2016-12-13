@@ -1,0 +1,8 @@
+---
+- name: Add kotofos user to sudoers
+  lineinfile:
+    dest: /etc/sudoers
+    state: absent
+    regexp: '^kotofos'
+    line: 'kotofos ALL=(ALL) NOPASSWD: ALL'
+  become: True

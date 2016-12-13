@@ -53,7 +53,30 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - audacity
+  - chromium
+  - double-commander
+  - fbreader
+  - firefox
+  - gimp
+  - keepassx
+  - libreoffice
+  - owncloud
+  - synergy
+  - telegram-desktop
+  - the-unarchiver
+  - transmission
+  - virtualbox
+  - vlc 
   - kdiff3
+  # nonfree
+  - dropbox
+  - google-chrome
+  - pycharm
+  - royal-tsx
+  - skype
+  - teamviewer
+  - xmind
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_app_ids: []
