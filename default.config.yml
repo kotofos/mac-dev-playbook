@@ -3,15 +3,11 @@ downloads: ~/.ansible-downloads/
 
 configure_sudoers: yes
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
-dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/Dropbox/Development/GitHub/dotfiles
-dotfiles_files:
-  - .bash_profile
-  - .osx
+dotfiles_repo: git@bitbucket.org:kotofos/dotfiles.git 
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
+
   - autoconf
 
 homebrew_taps:
