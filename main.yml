@@ -13,6 +13,7 @@
   roles:
     - geerlingguy.homebrew
     - dotfiles_yadm
+    - oh-my-zsh
     - name: geerlingguy.mas
       when: mas_installed_app_ids
 
