@@ -11,9 +11,11 @@
 
   roles:
     - ssh_key
+    - pwdless_sudo
     - geerlingguy.homebrew
     - dotfiles_yadm
     - oh-my-zsh
+    - pwdless_sudo_disable
     - name: geerlingguy.mas
       when: mas_installed_app_ids
 
