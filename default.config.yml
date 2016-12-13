@@ -8,6 +8,7 @@ dotfiles_repo: git@bitbucket.org:kotofos/dotfiles.git
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - autoconf
+<<<<<<< Updated upstream
   - bash-completion
   - doxygen
   - gettext
@@ -39,6 +40,9 @@ homebrew_installed_packages:
   - drush
   - wget
   - wrk
+=======
+  - yadm
+>>>>>>> Stashed changes
 
 homebrew_taps:
   - homebrew/core

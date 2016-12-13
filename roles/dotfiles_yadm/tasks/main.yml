@@ -1,18 +1,25 @@
 ---
 - name: Check is yadm repo exists
-  shell: yadm list
+  shell: /usr/local/bin/yadm list
   register: yadm_repo_result
   failed_when: "yadm_repo_result.rc != 0 and 'Git repo does not exist' not in yadm_repo_result.stdout"
   changed_when: False
   become: no
 
+- name: add bitbucket to known_hosts
+  lineinfile:
+    dest: "{{ ansible_env.HOME }}/.ssh/known_hosts"
+    state: present
+    line: "{{ lookup('pipe', 'ssh-keyscan -t rsa bitbucket.org') }}"
+    regexp: "^bitbucket\\.org"
+
 - name: Clone yadm repo
-  shell: yadm clone "{{ dotfiles_repo }}"
+  shell: /usr/local/bin/yadm clone "{{ dotfiles_repo }}"
   register: yadm_clone_result
   when: "'Git repo does not exist' in yadm_repo_result.stdout"
   become: no
 
 - name: Overwrite local dotfiles
-  shell: yadm reset --hard origin/master
+  shell: /usr/local/bin/yadm reset --hard origin/master
   when: "'conflict' in yadm_clone_result.stdout"
   become: no
