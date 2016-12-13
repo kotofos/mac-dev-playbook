@@ -21,5 +21,5 @@
 
 - name: Overwrite local dotfiles
   shell: /usr/local/bin/yadm reset --hard origin/master
-  when: "'conflict' in yadm_clone_result.stdout"
+  when: yadm_clone_result is defined and 'conflict' in yadm_clone_result.stdout 
   become: no

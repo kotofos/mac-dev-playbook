@@ -1,0 +1,10 @@
+---
+- name: Cloning oh-my-zsh repo
+  git:
+    repo=https://github.com/robbyrussell/oh-my-zsh
+    dest=~/.oh-my-zsh
+    umask=0033
+
+- name: Set zsh as default shell
+  user: name="{{ ansible_user_id }}" shell=/bin/zsh
+  become: True
