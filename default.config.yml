@@ -7,8 +7,45 @@ dotfiles_repo: git@bitbucket.org:kotofos/dotfiles.git
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-
-  - autoconf
+  - bash-completion
+  - git
+  - gpg
+  - iperf
+  - python
+  - nmap
+  - subversion
+  - pv
+  - wget
+  - yadm
+  - zsh
+  - tree
+  - git
+  - mc
+  - python3
+  - subversion
+  - tmux
+  - vim
+  - zsh
+  - zsh-completions
+  - android-platform-tools
+  - binutils
+  - coreutils
+  - gnu-tar
+  - gnu-sed
+  - gawk
+  - gnutls
+  - gnu-indent
+  - gnu-getopt
+  - findutils
+  - ffmpeg
+  - gnupg
+  - macvim
+  - subversion
+  - syncthing
+  - trash
+  - watch
+  - wdiff
+  - youtube-dl
 
 homebrew_taps:
   - homebrew/core
