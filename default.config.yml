@@ -7,45 +7,11 @@ dotfiles_repo: git@bitbucket.org:kotofos/dotfiles.git
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-  - bash-completion
   - git
-  - gpg
-  - iperf
-  - python
-  - nmap
-  - subversion
-  - pv
   - wget
   - yadm
   - zsh
-  - tree
-  - git
-  - mc
-  - python3
-  - subversion
-  - tmux
-  - vim
-  - zsh
   - zsh-completions
-  - android-platform-tools
-  - binutils
-  - coreutils
-  - gnu-tar
-  - gnu-sed
-  - gawk
-  - gnutls
-  - gnu-indent
-  - gnu-getopt
-  - findutils
-  - ffmpeg
-  - gnupg
-  - macvim
-  - subversion
-  - syncthing
-  - trash
-  - watch
-  - wdiff
-  - youtube-dl
 
 homebrew_taps:
   - homebrew/core
@@ -53,30 +19,7 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - audacity
-  - chromium
-  - double-commander
-  - fbreader
-  - firefox
-  - gimp
-  - keepassx
-  - libreoffice
   - owncloud
-  - synergy
-  - telegram-desktop
-  - the-unarchiver
-  - transmission
-  - virtualbox
-  - vlc 
-  - kdiff3
-  # nonfree
-  - dropbox
-  - google-chrome
-  - pycharm
-  - royal-tsx
-  - skype
-  - teamviewer
-  - xmind
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_app_ids: []
