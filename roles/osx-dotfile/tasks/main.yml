@@ -1,0 +1,5 @@
+---
+- name: Run .osx dotfiles.
+  shell: ~/.osx
+  changed_when: false
+  become: False
