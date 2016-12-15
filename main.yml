@@ -12,6 +12,7 @@
   roles:
     - ssh_key
     - pwdless_sudo
+    - xcode-tools
     - geerlingguy.homebrew
     - dotfiles_yadm
     - oh-my-zsh

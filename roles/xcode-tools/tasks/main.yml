@@ -1,0 +1,11 @@
+---
+- name: Copy xcode install script
+  copy:
+    src: install-xcode-tools.rb
+    dest: "{{ ansible_env.HOME }}/install-xcode-tools.rb"
+
+- name: Check and install xcode tools
+  shell: "ruby {{ ansible_env.HOME }}/install-xcode-tools.rb"
+  register: result
+  changed_when: "'done' in result.stdout"
+
