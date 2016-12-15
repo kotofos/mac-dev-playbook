@@ -3,6 +3,6 @@
   lineinfile:
     dest: /etc/sudoers
     state: present
-    regexp: '^kotofos'
-    line: 'kotofos ALL=(ALL) NOPASSWD: ALL'
+    regexp: '^{{ ansible_used_id }}'
+    line: '{{ ansible_used_id }} ALL=(ALL) NOPASSWD: ALL'
   become: true

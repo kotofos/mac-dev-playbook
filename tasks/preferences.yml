@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 # Custom Terminal theme.
 - name: Get current Terminal profile.
   shell: defaults read com.apple.terminal 'Default Window Settings'
@@ -32,3 +33,5 @@
   when: configure_sudoers
 
 # TODO: Configure Sublime Text (see templates/sublime/*).
+=======
+>>>>>>> remote_run

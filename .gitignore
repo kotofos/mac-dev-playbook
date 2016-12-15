@@ -1,6 +1,7 @@
 *.vagrant
 .DS_Store
 *.retry
-roles*
+roles/geerlingguy*
 config.yml
 *.orig
+*.swp
