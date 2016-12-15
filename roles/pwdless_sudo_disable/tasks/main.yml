@@ -1,8 +1,8 @@
 ---
-- name: Add kotofos user to sudoers
+- name: Add user to sudoers
   lineinfile:
     dest: /etc/sudoers
     state: absent
-    regexp: '^kotofos'
-    line: 'kotofos ALL=(ALL) NOPASSWD: ALL'
+    regexp: '^{{ ansible_user_id }}'
+    line: '{{ ansible_user_id }} ALL=(ALL) NOPASSWD: ALL'
   become: True
