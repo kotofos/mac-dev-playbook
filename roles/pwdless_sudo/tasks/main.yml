@@ -5,4 +5,5 @@
     state: present
     regexp: '^{{ ansible_user_id }}'
     line: '{{ ansible_user_id }} ALL=(ALL) NOPASSWD: ALL'
-  become: true
+  changed_when: False
+  become: True
