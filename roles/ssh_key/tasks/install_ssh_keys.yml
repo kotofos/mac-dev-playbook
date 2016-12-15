@@ -1,0 +1,8 @@
+---
+- name: install SSH key (kotofoss-iMac.local)
+  become: no
+  become_user: "{{ansible_user_id}}"
+  authorized_key:
+    key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    user: "{{ansible_user_id}}"
+    state: present
