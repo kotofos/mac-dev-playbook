@@ -6,10 +6,11 @@
   changed_when: False
   become: no
 
-- name: add bitbucket to known_hosts
+- name: Ensure bitbucket in known_hosts
   lineinfile:
     dest: "{{ ansible_env.HOME }}/.ssh/known_hosts"
     state: present
+    create: True
     line: "{{ lookup('pipe', 'ssh-keyscan -t rsa bitbucket.org') }}"
     regexp: "^bitbucket\\.org"
 
