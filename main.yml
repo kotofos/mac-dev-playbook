@@ -12,11 +12,11 @@
 
   roles:
     - pwdless_sudo
+    - osx-dotfile
+    - oh-my-zsh
     - xcode-tools
     - geerlingguy.homebrew
     - dotfiles_yadm
-    - oh-my-zsh
-    - osx-dotfile
     - pwdless_sudo_disable
     - name: geerlingguy.mas
       when: mas_installed_app_ids
